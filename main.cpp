@@ -4,18 +4,38 @@ int main()
 {
     // Currency conversion Try This
     double amount;
-    int selection;
+    int currency;
+    std::cout << "Please enter source currency from the list:" << std::endl;
+    std::cout << "1. Yen\n2. Euro\n3. Pound\n4. Yuan\n5. Kroner" << std::endl;
+    std::cin >> currency;
     std::cout << "Please enter an amount: ";
     std::cin >> amount;
-    std::cout << "Please select a currency: 1. Yen, 2. Euro, 3. Pound" << std::endl;
-    std::cin >> selection;
 
-    if (selection == 1)
-        cout << amount << " of yen is " << amount * 0.0088 << " dollars.";
-    else if (selection == 2)
-        cout << amount << " of euros is " << amount * 1.13 << " dollars.";
-    else if (selection == 3)
-        cout << amount << " of pounds is " << amount * 1.35 << " dollars.";
+    switch (currency)
+    {
+        case 1:
+            std::cout << amount << " of JPY is " << amount * 0.0087 << " dollars.";
+            break;
+
+        case 2:
+            std::cout << amount << " of EUR is " << amount * 1.12 << " dollars.";
+            break;
+
+        case 3:
+            std::cout << amount << " of GBP is " << amount * 1.35 << " dollars.";
+            break;
+
+        case 4:
+            std::cout << amount << " of CNY is " << amount * 0.16 << " dollars.";
+            break;
+
+        case 5:
+            std::cout << amount << " of JPY is " << amount * 0.11 << " dollars.";
+            break;
+    }
+
+
+    
 
     return 0;
 }
